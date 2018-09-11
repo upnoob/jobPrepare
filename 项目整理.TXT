@@ -159,5 +159,3 @@ web.xml 加载过程
 6. 以上步骤都是在web项目还没有完全启动的时候就已经完成的工作。如果系统中还有Servlet，则Servlet是在第一次发起请求时被实例化的，而且一般不会被容器销毁。他可以服务于多个用户请求，所以，Servlet的初始化要比上述步骤晚。
 7. 总的来说，web.xml加载顺序为<context-param> <listener>  <filter>  <servlet>。如果出现了相同顺序，则按照出现的先后顺序加载。
 8. 对于<filter> 和 <filter-mapping>而言，<filter-mapping>必须出现在对应的<filter>之后，否则会报<filter-name>还未定义。
-
-web.xml标签详解
